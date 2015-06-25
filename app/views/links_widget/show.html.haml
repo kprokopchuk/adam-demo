@@ -6,6 +6,5 @@
         = link_to link.title, link_obj.download_original, class: "download", name: link_obj.file_type
         %span= number_to_human_size(link_obj.file_size)
 - else
-  -#todo layout
-  %div{ style: "background-color: #FF6666" }
-    Please add download links in widget properties.
+  %div
+    %p (Hint: Add download links. Click on the Scrivito icon to the right to open widget properties.)
