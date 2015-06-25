@@ -45,8 +45,8 @@ module Api
     request = Net::HTTP::Post.new(uri.request_uri)
     request.content_type = "application/json"
     request.body = {
-        user_name: adam_config["user_name"],
-        password: adam_config["password"]
+        user_name: ENV['ADAM_USER_NAME'] || adam_config["user_name"],
+        password: ENV['ADAM_PASSWORD'] || adam_config["password"]
     }.to_json
 
     response = Net::HTTP.start(uri.hostname, uri.port) {|http|
