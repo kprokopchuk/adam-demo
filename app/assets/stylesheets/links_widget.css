@@ -1,0 +1,156 @@
+/*.download:before {*/
+  /*content: "";*/
+  /*width: 18px;*/
+  /*height: 18px;*/
+  /*top: 0.5em;*/
+  /*background-position: 0px -196px;*/
+  /*padding: 0em;*/
+  /*background-image: url("/assets/sprite_icon.png");*/
+/*}*/
+/*.download:after {*/
+  /*content: "FILE";*/
+  /*position: absolute;*/
+  /*right: 90px;*/
+  /*padding: 0.5em 0.5em 0em 0em;*/
+  /*color: #6B6F73;*/
+/*}*/
+/*.download[name$="PDF"]:after {*/
+  /*content: "PDF";*/
+/*}*/
+/*.download[name$="JPG"]:after {*/
+  /*content: "JPG";*/
+/*}*/
+/*.download[name$=".png"]:after {*/
+  /*content: "PNG";*/
+/*}*/
+/*.download[name$="MP4"]:after {*/
+  /*content: "MP4";*/
+/*}*/
+/*.download.small {*/
+  /*padding-left: 30px;*/
+  /*padding-right: 0px !important;*/
+/*}*/
+/*.download.small:after {*/
+  /*content: none;*/
+/*}*/
+
+.link-list {
+    list-style: none;
+    list-style-type: none;
+}
+.link-list li:before {
+    content: none;
+}
+
+ul.link-list {
+    border-top: #DDD 1px solid;
+    border-bottom: #DDD 1px solid;
+}
+ul.link-list li {
+    vertical-align: center;
+    position: relative;
+    padding: 0px 0px;
+}
+ul.link-list li:nth-child(odd) {
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #f6f6f6 50%, #ffffff 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(50%, #f6f6f6), color-stop(100%, #ffffff));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #f6f6f6 50%, #ffffff 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #ffffff 0%, #f6f6f6 50%, #ffffff 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #ffffff 0%, #f6f6f6 50%, #ffffff 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #ffffff 0%, #f6f6f6 50%, #ffffff 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
+    /* IE6-9 */
+}
+ul.link-list li > span {
+    position: absolute;
+    padding: 0.5em 0.5em;
+    right: 0px;
+    top: 0px;
+}
+ul.link-list li + li {
+    margin-top: 0px;
+    border-top: #DDD 1px solid;
+}
+ul.link-list a {
+    padding: 0.5em 7em 0.5em 4%;
+    color: #262626;
+    padding-right: 150px;
+    display: block;
+    position: relative;
+}
+ul.link-list a:before {
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    padding: 0.5em 0.5em;
+}
+ul.link-list a:after {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+ul.link-list a.link[href^="http"]:after {
+    content: "Externer Link";
+}
+ul.link-list a.link:after {
+    content: "Mehr Informationen";
+    position: absolute;
+    right: 0px;
+    padding: 0.5em 0.5em 0em 0em;
+    color: #262626;
+}
+ul.link-list a.link:before {
+    width: 5px;
+    height: 5px;
+    top: 0.6em;
+    background-position: 4px -134px;
+}
+html[lang="en"] ul.link-list a.link[href^="http"]:after {
+    content: "external link";
+}
+html[lang="en"] ul.link-list a.link:after {
+    content: "More information";
+}
+ul.link-list a.download:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    top: 0.5em;
+    background-position: 0px -196px;
+    padding: 0em;
+    background-image: url("/assets/sprite_icon.png");
+}
+ul.link-list a.download:after {
+    content: "FILE";
+    position: absolute;
+    right: 90px;
+    padding: 0.5em 0.5em 0em 0em;
+    color: #262626;
+}
+ul.link-list a.download[name$="MP4"]:after {
+    content: "MP4";
+}
+ul.link-list a.download[name$="PDF"]:after {
+    content: "PDF";
+}
+ul.link-list a.download[name$="JPG"]:after {
+    content: "JPG";
+}
+ul.link-list a.download[name$="PNG"]:after {
+    content: "PNG";
+}
+ul.link-list a.download.small {
+    padding-left: 30px;
+    padding-right: 0px !important;
+}
+ul.link-list a.download.small:after {
+    content: none;
+}

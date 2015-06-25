@@ -1,0 +1,12 @@
+- entity = @obj.entity
+
+= render template: "adam_asset/details", locals: { entity: entity, obj: @obj }
+
+= scrivito_details_for 'Video Duration' do
+  = entity[:video_duration]
+
+= scrivito_details_for 'Video MP4' do
+  = link_to entity[:video_mp4], entity[:video_mp4], target: :_blank
+
+= scrivito_details_for 'Video Webm' do
+  = link_to entity[:video_webm], entity[:video_webm], target: :_blank

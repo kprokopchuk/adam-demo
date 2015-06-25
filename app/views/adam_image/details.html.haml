@@ -1,0 +1,12 @@
+- entity = @obj.entity
+
+= render template: "adam_asset/details", locals: { entity: entity, obj: @obj }
+
+= scrivito_details_for 'Image Width' do
+  = entity[:image_width]
+
+= scrivito_details_for 'Image Height' do
+  = entity[:image_height]
+
+= scrivito_details_for 'Color Space' do
+  = entity[:color_space]

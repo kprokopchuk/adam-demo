@@ -1,0 +1,17 @@
+.dynamic-container {
+  position: relative;
+  padding-bottom: 56.25% !important;
+  height: 0;
+  overflow: hidden;
+  &.ratio_4_3 {
+    padding-bottom: 75.00% !important;
+  }
+}
+
+.projekktor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

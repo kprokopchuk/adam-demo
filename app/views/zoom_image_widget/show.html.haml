@@ -1,0 +1,6 @@
+%figure
+  - if widget.image
+    = link_to widget.image.preview, class: 'gallery', title: widget.image.display_title, data: { group: "group-#{widget.id}" } do
+      = image_tag widget.image.thumbnail
+  - else
+    = scrivito_image_tag widget, :image, data: { filter_cb: "adam_images" }

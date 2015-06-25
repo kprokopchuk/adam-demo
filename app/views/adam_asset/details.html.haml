@@ -1,0 +1,28 @@
+= scrivito_details_for 'Adam ID' do
+  = obj.adam_id
+
+= scrivito_details_for 'File Name' do
+  = entity[:file_name]
+
+= scrivito_details_for 'File Type' do
+  = obj.file_type
+
+= scrivito_details_for 'File Size' do
+  = entity[:file_size]
+
+= scrivito_details_for 'Created On' do
+  = entity[:created_on]
+
+= scrivito_details_for 'Modified On' do
+  = entity[:modified_on]
+
+= scrivito_details_for 'Preview' do
+  = link_to entity[:preview], entity[:preview], target: :_blank
+
+= scrivito_details_for 'Thumbnail' do
+  = link_to entity[:thumbnail], entity[:thumbnail], target: :_blank
+
+= scrivito_details_for 'Download Original' do
+  = link_to entity[:download_original], entity[:download_original]
+
+
