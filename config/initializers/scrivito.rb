@@ -15,6 +15,8 @@ Scrivito.configure do |config|
   config.tenant  = ENV['SCRIVITO_TENANT'] || scrivito_config['tenant']
   config.api_key = ENV['SCRIVITO_API_KEY'] || scrivito_config['api_key']
   config.ui_locale = :en
+
+  config.editing_auth { |env| Scrivito::User.system_user }
 end
 
 Scrivito::ImageTagHelper.class_eval do
