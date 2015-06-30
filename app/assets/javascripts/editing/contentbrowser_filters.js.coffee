@@ -32,27 +32,33 @@ scrivito.content_browser.filters =
                 icon: 'video'
           corporate:
             title: 'Corporate'
+            query: scrivito.obj_where('_obj_class', 'equals', ['AdamImage', 'AdamPdf']).and_not('file_type', 'equals', 'JPG')
             options:
               topics:
                 title: 'Topics'
+                query: scrivito.obj_where('_obj_class', 'equals', ['AdamImage', 'AdamPdf']).and_not('file_type', 'equals', 'JPG')
                 options:
                   sirona_workflows:
                     title: 'Sirona Workflows'
                     query: scrivito.obj_where('_obj_class', 'equals', ['AdamImage', 'AdamPdf']).and_not('file_type', 'equals', 'JPG')
           cad_cam_systems:
             title: 'CAD CAM Systems'
+            value: 'AdamVideo'
             options:
               cerec_implantologie:
                 title: 'CEREC Implantologie'
+                value: 'AdamVideo'
                 options:
                   general:
                     title: 'General'
                     value: 'AdamVideo'
           imaging_systems:
             title: 'Imaging Systems'
+            query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'JPG')
             options:
               software:
                 title: 'Software'
+                query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'JPG')
                 options:
                   sidexis_4:
                     title: 'SIDEXIS 4'
