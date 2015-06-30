@@ -16,11 +16,11 @@ scrivito.content_browser.filters =
                 options:
                   jpg:
                     title: 'JPG'
-                    query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'JPG')
+                    query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'JPG')
                     icon: 'image'
                   png:
                     title: 'PNG'
-                    query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'PNG')
+                    query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'PNG')
                     icon: 'image'
               pdf:
                 title: 'Pdf'
@@ -30,17 +30,34 @@ scrivito.content_browser.filters =
                 title: 'Video'
                 value: 'AdamVideo'
                 icon: 'video'
+          corporate:
+            title: 'Corporate'
+            options:
+              topics:
+                title: 'Topics'
+                options:
+                  sirona_workflows:
+                    title: 'Sirona Workflows'
+                    query: scrivito.obj_where('_obj_class', 'equals', ['AdamImage', 'AdamPdf']).and_not('file_type', 'equals', 'JPG')
           cad_cam_systems:
             title: 'CAD CAM Systems'
-            value: ['AdamImage', 'AdamVideo']
-          instruments:
-            query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'PNG')
-          hygiene_systems:
-            title: 'Hygiene Systems'
-            value: 'AdamPdf'
+            options:
+              cerec_implantologie:
+                title: 'CEREC Implantologie'
+                options:
+                  general:
+                    title: 'General'
+                    value: 'AdamVideo'
           imaging_systems:
             title: 'Imaging Systems'
-            value: 'AdamImage'
+            options:
+              software:
+                title: 'Software'
+                options:
+                  sidexis_4:
+                    title: 'SIDEXIS 4'
+                    query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'JPG')
+
 
 #filters for scrivito_tag
 scrivito.on 'load', ->
@@ -56,11 +73,11 @@ scrivito.on 'load', ->
             options:
               jpg:
                 title: 'JPG'
-                query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'JPG')
+                query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'JPG')
                 icon: 'image'
               png:
                 title: 'PNG'
-                query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'PNG')
+                query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'PNG')
                 icon: 'image'
     pdf:
       obj_class:
@@ -96,11 +113,11 @@ scrivito.on 'load', ->
                     options:
                       jpg:
                         title: 'JPG'
-                        query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'JPG')
+                        query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'JPG')
                         icon: 'image'
                       png:
                         title: 'PNG'
-                        query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'PNG')
+                        query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'PNG')
                         icon: 'image'
                   pdf:
                     title: 'Pdf'
@@ -114,7 +131,7 @@ scrivito.on 'load', ->
                 title: 'CAD CAM Systems'
                 value: ['AdamImage', 'AdamVideo']
               instruments:
-                query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'starts_with', 'PNG')
+                query: scrivito.obj_where('_obj_class', 'equals', 'AdamImage').and('file_type', 'equals', 'PNG')
               hygiene_systems:
                 title: 'Hygiene Systems'
                 value: 'AdamPdf'
