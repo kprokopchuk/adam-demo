@@ -10,13 +10,4 @@ class AdamImage < AdamAsset
         }
     )
   end
-
-  # preview and thumbnail are used for scrivito_image_tag
-  def preview
-    entity[:preview]
-  end
-
-  def thumbnail
-    entity[:thumbnail]
-  end
 end

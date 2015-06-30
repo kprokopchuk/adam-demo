@@ -33,9 +33,14 @@ class AdamAsset < Obj
     entity[:file_type]
   end
 
-  # thumbnail is used for content browser preview
+  # thumbnail is used for content browser preview and scrivito_image_tag
   def thumbnail
     entity[:thumbnail]
+  end
+
+  # preview is used for scrivito_image_tag and video poster
+  def preview
+    entity[:preview]
   end
   
   # file_size and download_original are used for LinksWidget

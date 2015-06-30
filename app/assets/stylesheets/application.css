@@ -11,6 +11,7 @@
  * file per style scope.
  *
  /*
+ *= require_tree ./demo
  *= require scrivito
  *= require scrivito_video_widget
  *= require scrivito_space_widget

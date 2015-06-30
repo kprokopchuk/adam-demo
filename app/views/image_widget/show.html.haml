@@ -1,1 +1,6 @@
-= scrivito_image_tag widget, :image, data: { filter_cb: "all_images" }, rendition: :preview
+%div.animated.wow.fadeInDown
+  %img.icon{:alt => "", :src => "/assets/demo/icon1.png"}/
+  %span.separator
+  = scrivito_tag :h2, widget, :headline
+  %p
+    = scrivito_image_tag widget, :image, data: { filter_cb: "all_images" }, rendition: :preview

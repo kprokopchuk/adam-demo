@@ -17,6 +17,14 @@
 
 //= require bootstrap-sprockets
 //= require_tree ./vendor
+
+//= require ./demo/fancybox
+//= require ./demo/fancybox-buttons
+//= require ./demo/fancybox-media
+//= require ./demo/fancybox-thumbs
+//= require ./demo/wow
+//= require ./demo/main
+
 //= require_tree .
 
 //fix for video widget size

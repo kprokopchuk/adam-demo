@@ -1,3 +1,8 @@
-.dynamic-container
-  %video.projekktor{ controls: "controls", :height => "100%", poster: widget.poster && widget.poster.preview, width: "100%"}
-    %source{ src: widget.source_src, type: widget.mime_type }/
+%div.animated.wow.fadeInDown{"data-wow-delay" => ".2s"}
+  %img.icon{:alt => "", :src => "/assets/demo/icon2.png"}/
+  %span.separator
+  = scrivito_tag :h2, widget, :headline
+  %p
+    .dynamic-container
+      %video.projekktor{ controls: "controls", :height => "100%", poster: widget.poster_path, width: "100%"}
+        %source{ src: widget.source_path, type: widget.mime_type }/

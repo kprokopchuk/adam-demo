@@ -1,1 +1,84 @@
-= scrivito_tag :div, @obj, :body
+%section.billboard.dark
+  %header.wrapper.dark
+    %nav
+      %ul
+        %li
+          %a{:href => ""} English
+        %li
+          %a{:href => ""} Contact Us
+        %li
+          %a{:href => ""} Change Password
+        %li
+          %a{:href => ""} User
+        %li
+          %a{:href => ""} Login
+  .caption.dark.animated.wow.fadeInDown.clearfix
+    %h1 Brand Solutions
+    %p DIE BRAND SOLUTION ERMÖGLICHT SELBSTBEDIENUNG FÜR ALLE NUTZER: SELF-SERVICE
+    %hr
+  .shadow
+/ End billboard
+%section.services.wrapper
+  = scrivito_tag :div, @obj, :body, class: "clearfix"
+/ End services
+%section.video
+  %a#play_btn.fancybox.animated.wow.flipInX{"data-wow-duration" => "2s", :href => "http://www.youtube.com/embed/cBJyo0tgLnw"}
+/ End video
+%section.testimonials.wrapper
+  .title.animated.wow.fadeIn
+    %h2 Features
+    %h3 Scrivito: A Cloud CMS Built for Ruby on Rails
+    %hr.separator/
+  %ul.clearfix
+    %li.animated.wow.fadeInDown
+      %p
+        %img.quotes{:alt => "", :src => "/assets/demo/quotes.png"}>/
+        Your clients can edit content in place, directly on the website. Scrivito is based on widgets as the building blocks of pages. Fill widgets with your content, move them using drag and drop, cut or copy and paste them to give your pages your favorite layout.
+        %span.triangle
+      .client
+        %img.avatar{:src => "/assets/demo/heart.jpg"}/
+        .client_details
+          %h4
+            Your clients will
+            %br/
+            love it, too
+    %li.animated.wow.fadeInDown{"data-wow-delay" => ".2s"}
+      %p
+        %img.quotes{:alt => "", :src => "/assets/demo/quotes.png"}>/
+        We like to save your time so you can focus on the important things: Developing your website functionality and look. That's why we built Scrivito as a cloud service. So you don't have to keep on updating your CMS all the time. And you always get the latest features.
+        %span.triangle
+      .client
+        %img.avatar{:src => "/assets/demo/cloud.jpg"}/
+        .client_details
+          %h4 It's a cloud service
+    %li.animated.wow.fadeInDown{"data-wow-delay" => ".4s"}
+      %p
+        %img.quotes{:alt => "", :src => "/assets/demo/quotes.png"}>/
+        You can change the layout anytime, using the templating language you prefer … ERB, HAML, you name it. So the HTML code looks exactly the way you want. SEO, anyone?
+        %span.triangle
+      .client
+        %img.avatar{:src => "/assets/demo/api.jpg"}/
+        .client_details
+          %h4 Awesome API
+/ End testimonials
+%br/
+%footer
+  .wrapper
+    .rights
+      %p
+        © All Rights Reserved 2015 -
+        %a{:href => "http://www.oew.de", :target => "_blank"} Oe+W
+    %nav
+      %ul
+        %li
+          %a{:href => "#"} Help
+        %li
+          %a{:href => "#"} Management
+        %li
+          %a{:href => "#"} Glossary
+        %li
+          %a{:href => "#"} Legal Disclaimer
+        %li
+          %a{:href => "#"} Impressum
+/ End footer
+-#%script{:src => "../ga.js"} todo?
